@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Image Gallery</h1>
+        <input type="file" id="imageUpload" multiple accept="image/*">
+        <input type="text" id="searchBar" placeholder="Search images...">
+        <div class="sort-options">
+            <button onclick="sortImages('name')">Sort by Name</button>
+            <button onclick="sortImages('date')">Sort by Date</button>
+        </div>
+    </div>
+    <div id="gallery" class="gallery"></div>
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="prev" onclick="prevImage()">&#10094;</span>
+        <img id="lightbox-img" class="lightbox-img">
+        <span class="next" onclick="nextImage()">&#10095;</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
